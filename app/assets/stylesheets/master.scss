@@ -1,0 +1,72 @@
+/* GLOBAL */
+
+.clear {
+  clear:both;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
+
+/* navbar */
+
+.navbar {
+  border-radius: 0;
+  min-height: 60px;
+  margin-bottom: 0;
+}
+
+.navbar.navbar-default .btn.btn-primary {
+  color: #fff;
+  font-size: 18px;
+}
+
+#brand {
+  display: inline;
+  color: orange;
+  font-size: 30px;
+}
+
+.navbar-nav,
+.navbar-right li a {
+  font-size: 18px;
+}
+
+.navbar li {
+  margin: 0px 10px;
+}
+
+.navbar-collapse {
+  height: 250px;
+}
+
+.collapse {
+  position: relative;
+  z-index: 9999;
+}
+
+/* SING IN/UP */
+
+.booyah-box {
+  background: #fff;
+  border: 1px solid #bebebd;
+  border-radius: 5px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.alert-danger,
+.alert-info {
+  border-radius: 0;
+  margin: 0;
+}
+
+.input.boolean {
+  margin-left: 18px;
+  margin-top: 5px;
+}
+
+.input.boolean label {
+  line-height: 44px;
+  margin-top: 5px;
+}

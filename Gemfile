@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # project gems
 gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'sprockets'
 gem 'devise'
 gem 'simple_form'
 gem 'carrierwave'
