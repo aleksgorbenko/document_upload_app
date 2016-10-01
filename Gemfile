@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+# project gems
+gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'devise'
+gem 'simple_form'
+gem 'carrierwave'
+gem 'figaro'
+gem 'fog'
+gem 'carrierwave-aws'
+gem 'rubocop', '~> 0.41.2', require: false
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
