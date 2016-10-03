@@ -1,0 +1,17 @@
+<div class="booyah-box col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 clear">
+  <h2 class="text-center">Ringley Documents</h2>
+  <br>
+  <br>
+  <% if !@documents %>
+    <h4 class="text-center">
+      There are currently no documents uploaded to our Portal!
+    </h4>
+  <% else %>
+    <%= @documents.each do |doc| %>
+      <div class="form-inputs">
+        <h3><%= doc.title %></h3>
+        <h4>Filename:</h4> <%= doc.file %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

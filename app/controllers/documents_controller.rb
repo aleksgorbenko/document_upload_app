@@ -2,7 +2,7 @@ class DocumentsController < ApplicationController
   before_action :authenticate_user!, only: [:create]
 
   def show
-
+    @documents = Document.all
   end
 
   def new
@@ -10,16 +10,17 @@ class DocumentsController < ApplicationController
   end
 
   def create
-    # if current_user.admin?
+    if current_user.admin?
       @document = current_user.documents.create(document_params)
-    # else
-
+    else
+      return render text: 'Unauthorized', status: :unauthorized
+    end
   end
 
   private
 
   def document_params
-    params.require(:document).permit(:title)
+    params.require(:document).permit(:title, :file)
   end
 
 end
