@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple application that allows admin users to upload documents and simple users look at these documents and download them
 
-Things you may want to cover:
+## Tech used
 
-* Ruby version
+Gems:
 
-* System dependencies
+* devise - for user login/authentication
+* carrrierwave, fog and figaro - for file upload via AWS S3
+* Rspec and factorygirl_rails - test suite
+* rubocop - for enforced ruby style guide
 
-* Configuration
+Database adapter used: PostGreSQL.
 
-* Database creation
+## To use
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Download the repo.
+2. Run the `bundle install` command to install all the gems.
+3. Start the server with `rails server command`.
