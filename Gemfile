@@ -13,6 +13,7 @@ gem 'pry-rails', :group => :development
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -2,5 +2,9 @@
 
   <h1>Welcome to the Ringley Document Portal!</h1>
   <br>
-  <p>To view the documents please first login or create the account if you don't have it yet.</p>
+  <% if user_signed_in? %>
+    <p>Click <%= link_to "here", documents_path %> to see the list of all documents on the portal</p>
+  <% else %>
+    <p>To view the documents please first login or create the account if you don't have it yet.</p>
+  <% end %>
 </div>
