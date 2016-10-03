@@ -21,6 +21,17 @@ h1, h2, h3, h4, h5, h6, .navbar {
   font-size: 18px;
 }
 
+.navbar.navbar-default .btn.btn-primary:hover {
+  background-color: #2C6599;
+}
+
+.navbar--username {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #777;
+  text-decoration: underline;
+}
+
 #brand {
   display: inline;
   color: orange;

@@ -10,8 +10,10 @@
     <% @documents.each do |doc| %>
       <div class="file-box">
         <h4><%= doc.title.capitalize %></h4>
-        <br>
-        <p class="file-box--timestamp">Uploaded on <%= doc.created_at.strftime("%B %d, %Y") %> by <%= doc.user.email %> </p>
+        <p class="file-box--timestamp">
+          Uploaded on <%= doc.created_at.strftime("%B %d, %Y") %> by <%= doc.user.email %>
+        </p>
+        <%= link_to 'Download', doc.file.to_s, class: 'btn-sm btn-primary' %>
       </div>
     <% end %>
   <% end %>

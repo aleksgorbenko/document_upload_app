@@ -49,7 +49,7 @@
                 <%= link_to "Sign In", new_user_session_path %>
               </li>
           <% else %>
-              <li>
+              <li class="navbar--username">
                 <%= current_user.email %>
               </li>
               <li>
