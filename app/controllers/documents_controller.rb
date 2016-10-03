@@ -1,7 +1,7 @@
 class DocumentsController < ApplicationController
   before_action :authenticate_user!, only: [:create]
 
-  def show
+  def index
     @documents = Document.all
   end
 
@@ -10,8 +10,9 @@ class DocumentsController < ApplicationController
   end
 
   def create
-    if current_user.admin?
-      @document = current_user.documents.create(document_params)
+    @document = current_user.documents.create(document_params)
+    if current_user.admin? && @document.valid?
+      redirect_to documents_path
     else
       return render text: 'Unauthorized', status: :unauthorized
     end

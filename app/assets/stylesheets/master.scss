@@ -45,6 +45,18 @@ h1, h2, h3, h4, h5, h6, .navbar {
   z-index: 9999;
 }
 
+.file-box {
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.file-box--timestamp {
+  font-size: 11px;
+  color: #999;
+}
+
 /* SING IN/UP */
 
 .booyah-box {

@@ -8,7 +8,6 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'figaro'
 gem 'fog'
-gem 'carrierwave-aws'
 gem 'rubocop', '~> 0.41.2', require: false
 gem 'pry-rails', :group => :development
 
