@@ -1,6 +1,6 @@
+# documents controller
 class DocumentsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new]
-
   def index
     @documents = Document.all
   end
@@ -9,20 +9,16 @@ class DocumentsController < ApplicationController
     if current_user.admin?
       @document = Document.new
     else
-      return unauthorized
+      unauthorized
     end
   end
 
   def create
+    return unauthorized unless user_admin?
     @document = current_user.documents.create(document_params)
-    if current_user.admin? && @document.valid?
-      redirect_to documents_path
-      flash[:success] = "Document uploaded successfully!"
-    elsif current_user.admin? && !@document.valid?
-      return render :new, status: :unprocessable_entity
-    else
-      return unauthorized
-    end
+    return unproc_entity unless @document.valid? && user_admin?
+    redirect_to documents_path
+    flash[:success] = 'Document uploaded successfully!'
   end
 
   private
@@ -35,4 +31,11 @@ class DocumentsController < ApplicationController
     render plain: 'Unauthorized', status: :unauthorized
   end
 
+  def unproc_entity
+    render :new, status: :unprocessable_entity
+  end
+
+  def user_admin?
+    current_user.admin?
+  end
 end

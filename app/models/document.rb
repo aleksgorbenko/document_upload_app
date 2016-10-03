@@ -1,3 +1,4 @@
+# document model and its validations
 class Document < ApplicationRecord
   validates :title, presence: true, length: { within: 5..40 }
   validates :file, presence: true
