@@ -1,5 +1,8 @@
 # README
 
+*Note: this project was a coding test which was a part of the interview process.*
+*Result - test accepted and I passed to the next stage.*
+
 Simple application that allows admin users to upload documents and simple users look at these documents and download them
 
 ## Tech used
@@ -19,4 +22,4 @@ Admin functionality is implemented with boolean value of `admin: true/false` of 
 
 1. Download the repo.
 2. Run the `bundle install` command to install all the gems.
-3. Start the server with `rails server command`.
+3. Start the server with `rails server` command.
