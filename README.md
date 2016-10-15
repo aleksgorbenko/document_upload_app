@@ -1,7 +1,6 @@
 # README
 
-*Note: this project was a coding test which was a part of the interview process.*
-*Result - test accepted and I passed to the next stage.*
+*Note: this project was a coding test which was a part of the interview process. Result - test was accepted and I passed to the next interview stage.*
 
 Simple application that allows admin users to upload documents and simple users look at these documents and download them
 
